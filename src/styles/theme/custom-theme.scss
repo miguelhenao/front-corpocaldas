@@ -1,0 +1,20 @@
+@use '~@angular/material' as mat;
+@use 'palettes';
+
+@include mat.core();
+
+$front-primary: mat.define-palette(palettes.$corpocaldas-brand-primary, 600, 500, 700);
+$front-accent: mat.define-palette(palettes.$corpocaldas-brand-secondary, 700, 500, 900);
+$front-warn: mat.define-palette(palettes.$corpocaldas-brand-red);
+
+$front-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $front-primary,
+      accent: $front-accent,
+      warn: $front-warn
+    )
+  )
+);
+
+@include mat.all-component-themes($front-theme);

@@ -1,0 +1,114 @@
+// Text colors lifted from @angular/material/core/theming/_palette.scss
+$dark-primary-text: rgba(black, 0.87);
+$dark-secondary-text: rgba(black, 0.54);
+$dark-disabled-text: rgba(black, 0.38);
+$dark-dividers: rgba(black, 0.12);
+$dark-focused: rgba(black, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 0.7);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+//
+// Corpocaldas Material Palette
+//
+
+$corpocaldas-brand-primary: (
+  50: #e0e9f1,
+  100: #b3c8dc,
+  200: #80a3c5,
+  300: #4d7ead,
+  400: #26629c,
+  500: #00468a,
+  600: #003f82,
+  700: #003777,
+  800: #002f6d,
+  900: #00205a,
+  A100: #8ba9ff,
+  A200: #5883ff,
+  A400: #255dff,
+  A700: #0c4aff,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text
+  )
+);
+
+$corpocaldas-brand-secondary: (
+  50: #edf4e3,
+  100: #d2e3b8,
+  200: #b4d189,
+  300: #95bf5a,
+  400: #7fb136,
+  500: #68a313,
+  600: #609b11,
+  700: #55910e,
+  800: #4b880b,
+  900: #3a7706,
+  A100: #c9ffa6,
+  A200: #aaff73,
+  A400: #8cff40,
+  A700: #7cff26,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text
+  )
+);
+
+$corpocaldas-brand-red: (
+  50: #ef9ba0,
+  100: #ef9ba0,
+  200: #ef9ba0,
+  300: #e8747b,
+  400: #e34d55,
+  500: #df242c,
+  600: #b71e25,
+  700: #8e171d,
+  800: #661114,
+  900: #3d0a0c,
+  A100: #fff6f7,
+  A200: #ffc3c4,
+  A400: #ff9092,
+  A700: #ff7778,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text
+  )
+);
