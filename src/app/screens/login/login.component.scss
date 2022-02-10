@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  &::after {
+    background-image: url('/assets/images/bg-header.png');
+    background-position: right;
+    background-repeat: repeat;
+    content: '';
+    height: 123px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.login-form {
+  width: 400px;
+}
+
+.logo-corpocaldas {
+  padding: 15px;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}

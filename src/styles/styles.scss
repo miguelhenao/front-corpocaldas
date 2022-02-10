@@ -1,4 +1,8 @@
 @import 'theme/custom-theme';
 
-@import 'base/equalizer';
+// @import 'base/equalizer';
 @import 'base/root';
+
+@import 'utilities/variables';
+@import 'utilities/utilities';
+@import 'utilities/material-overrides';
