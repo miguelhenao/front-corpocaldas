@@ -19,6 +19,7 @@
         mat-list-item
         matRipple
         *ngFor="let item of menuItems"
+        [routerLink]="item.routerLink"
       >
         <mat-icon color="accent">{{item.icon}}</mat-icon>
         <span>{{item.label}}</span>
