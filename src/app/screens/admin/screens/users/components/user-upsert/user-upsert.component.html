@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Agregar usuario</h2>
+<mat-dialog-content>
+  <form [formGroup]="formGroup">
+    <mat-form-field appearance="outline">
+      <mat-label>Cédula de ciudadanía</mat-label>
+      <input matInput required formControlName="id">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('id')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre(s)</mat-label>
+      <input matInput required formControlName="name">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('name')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido(s)</mat-label>
+      <input matInput required formControlName="lastname">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('lastname')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo electrónico</mat-label>
+      <input matInput required formControlName="email">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('email')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Usuario</mat-label>
+      <input matInput required formControlName="username">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('username')!)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput required formControlName="password">
+      <mat-error>{{formErrorMessageService.getErrorMessage(formGroup.get('password')!)}}</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button
+    mat-button
+    color="accent"
+    mat-dialog-close
+  >CANCELAR</button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="save()"
+  >CREAR</button>
+</mat-dialog-actions>
