@@ -4,3 +4,7 @@
 
 $config: mat.define-typography-config();
 $body-font-size: mat.font-size($config, body-1);
+
+$height-toolbar: 65px;
+// Use the same value as $height-toolbar
+$height-content: calc(100vh - 65px);

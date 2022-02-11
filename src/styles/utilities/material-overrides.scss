@@ -2,3 +2,22 @@
   width: 100%;
   margin-bottom: 5px;
 }
+
+.mat-list-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+  }
+
+  .mat-icon {
+    margin-right: 10px;
+  }
+}
+
+.mat-divider {
+  margin: 5px 0 !important;
+}

@@ -1,0 +1,26 @@
+@import 'src/styles/utilities/variables';
+
+.container {
+  height: $height-content;
+  width: 100%;
+}
+
+.menu-title {
+  margin-block-end: 0;
+}
+
+.sidenav {
+  padding: 20px;
+  width: 275px;
+}
+
+.sidenav-content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.toolbar {
+  height: $height-toolbar;
+}

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon matTooltip="Menú">menu</mat-icon>
+  </button>
+  <span>Plataforma Virtual SIG-SIR</span>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <img
+      class="img-responsive"
+      src="assets/images/title-corpocaldas.png"
+      alt="Logo de Corpocaldas"
+    >
+    <h3 class="menu-title">Menú</h3>
+    <mat-list role="list">
+      <mat-divider></mat-divider>
+      <button
+        mat-list-item
+        matRipple
+        *ngFor="let item of menuItems"
+      >
+        <mat-icon color="accent">{{item.icon}}</mat-icon>
+        <span>{{item.label}}</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button
+        mat-list-item
+        matRipple
+        class="btn-logout"
+        (click)="logout()"
+      >
+        <mat-icon color="warn">logout</mat-icon>
+        <span>Cerrar sesión</span>
+      </button>
+    </mat-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
