@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
 
 import { noWhitespaceValidator } from '../../../../../../helpers/validators/no-whitespace';
 import { FormErrorMessageService } from '../../../../../../services/form-error-message.service';
+import * as userActions from '../../../../../../root-store/user/actions';
 
 @Component({
   selector: 'app-user-upsert',
@@ -11,7 +13,7 @@ import { FormErrorMessageService } from '../../../../../../services/form-error-m
 })
 export class UserUpsertComponent implements OnInit {
   formGroup!: FormGroup;
-  constructor(public formErrorMessageService: FormErrorMessageService, private fb: FormBuilder) {}
+  constructor(public formErrorMessageService: FormErrorMessageService, private fb: FormBuilder, private store: Store) {}
 
   ngOnInit(): void {
     this.createFormGroup();
@@ -33,8 +35,7 @@ export class UserUpsertComponent implements OnInit {
   save(): void {
     this.formGroup.markAllAsTouched();
     if (this.formGroup.valid) {
-      // eslint-disable-next-line no-console
-      console.log(this.formGroup);
+      this.store.dispatch(userActions.CreateRequested({ user: this.formGroup.value }));
     }
   }
 }

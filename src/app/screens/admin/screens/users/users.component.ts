@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
+import { UserPayload } from '../../../../helpers/classes/user';
+import { selectAllUsers } from '../../../../root-store/user/selectors';
+import * as userActions from '../../../../root-store/user/actions';
 import { UserUpsertComponent } from './components/user-upsert/user-upsert.component';
 
 @Component({
@@ -8,14 +13,20 @@ import { UserUpsertComponent } from './components/user-upsert/user-upsert.compon
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent {
-  constructor(private dialog: MatDialog) {}
+export class UsersComponent implements OnInit {
+  allUsers$: Observable<UserPayload[]> = this.store.select(selectAllUsers);
+
+  constructor(private store: Store, private dialog: MatDialog) {}
+
+  ngOnInit(): void {
+    this.store.dispatch(userActions.ListRequested());
+  }
 
   openCreateUserDialog(): void {
     const dialogRef = this.dialog.open(UserUpsertComponent, {
       autoFocus: false,
       disableClose: true,
-      width: '500px'
+      width: '450px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
