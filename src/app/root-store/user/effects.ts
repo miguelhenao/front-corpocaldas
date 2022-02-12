@@ -51,7 +51,7 @@ export class UsersEffects {
       ofType(actions.UpdateRequested),
       exhaustMap(action =>
         this.usersService.update(action.user).pipe(
-          map(id => actions.UpdateSuccess({ id, message: this.updateMessage })),
+          map(user => actions.UpdateSuccess({ user, message: this.updateMessage })),
           catchError(error => of(actions.UpdateFail(error)))
         )
       )

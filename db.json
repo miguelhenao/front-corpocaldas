@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lester",
+      "lastname": "Bachshell",
+      "email": "lbachshell0@youtu.be",
+      "password": "EZ3dDjnECyZ9",
+      "role": "Electrician",
+      "username": "lbachshell0",
+      "enabled": false
+    },
+    {
+      "id": 2,
+      "name": "Maye",
+      "lastname": "O'Dowgaine",
+      "email": "modowgaine1@geocities.jp",
+      "password": "dZb6uR8b",
+      "role": "Construction Manager",
+      "username": "modowgaine1",
+      "enabled": false
+    },
+    {
+      "id": 3,
+      "name": "Bell",
+      "lastname": "Boldison",
+      "email": "bboldison2@alexa.com",
+      "password": "SSgfbw",
+      "role": "Construction Foreman",
+      "username": "bboldison2",
+      "enabled": true
+    },
+    {
+      "id": 4,
+      "name": "Myrlene",
+      "lastname": "Mingame",
+      "email": "mmingame3@ibm.com",
+      "password": "6UhGVel3A9bq",
+      "role": "Construction Manager",
+      "username": "mmingame3",
+      "enabled": true
+    },
+    {
+      "id": 5,
+      "name": "Torrin",
+      "lastname": "Krolle",
+      "email": "tkrolle4@g.co",
+      "password": "lKALc2A2",
+      "role": "Subcontractor",
+      "username": "tkrolle4",
+      "enabled": true
+    },
+    {
+      "id": 6,
+      "name": "Luci",
+      "lastname": "Eeles",
+      "email": "leeles5@edublogs.org",
+      "password": "OLPyjD",
+      "role": "Construction Worker",
+      "username": "leeles5",
+      "enabled": false
+    },
+    {
+      "id": 7,
+      "name": "Ashlen",
+      "lastname": "Braunds",
+      "email": "abraunds6@prlog.org",
+      "password": "JPFtjvVKUS",
+      "role": "Subcontractor",
+      "username": "abraunds6",
+      "enabled": false
+    },
+    {
+      "id": 8,
+      "name": "Joana",
+      "lastname": "Andrassy",
+      "email": "jandrassy7@usnews.com",
+      "password": "FaCrRRonwX",
+      "role": "Engineer",
+      "username": "jandrassy7",
+      "enabled": false
+    },
+    {
+      "id": 9,
+      "name": "Isabella",
+      "lastname": "Malinowski",
+      "email": "imalinowski8@cdc.gov",
+      "password": "EtbBKYzgy",
+      "role": "Subcontractor",
+      "username": "imalinowski8",
+      "enabled": false
+    },
+    {
+      "id": 10,
+      "name": "Tally",
+      "lastname": "Vaadeland",
+      "email": "tvaadeland9@creativecommons.org",
+      "password": "ITL21R8BfW4W",
+      "role": "Electrician",
+      "username": "tvaadeland9",
+      "enabled": false
+    },
+    {
+      "id": "1002798806",
+      "email": "henaoariasjm@gmail.com",
+      "enabled": true,
+      "lastname": "Henao Arias",
+      "name": "Juan Miguel",
+      "password": "123456xd",
+      "role": "admin",
+      "username": "henaoariasjm"
+    }
+  ]
+}

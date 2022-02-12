@@ -21,6 +21,6 @@ export const ReadFail = createAction('[User Effects] READ Users Fail', props<{ e
 export const UpdateRequested = createAction('[User Effects] UPDATE User Requested', props<{ user: UserPayload }>());
 export const UpdateSuccess = createAction(
   '[User Effects] UPDATE User Success',
-  props<{ id: string; message: string }>()
+  props<{ user: UserPayload; message: string }>()
 );
 export const UpdateFail = createAction('[User Effects] UPDATE User Fail', props<{ error: HttpErrorResponse }>());
