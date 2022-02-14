@@ -27,4 +27,8 @@ export class UsersService {
   read(id: number): Observable<UserPayload> {
     return this.http.get<UserPayload>(`${BASE_URL}/users/${id}`);
   }
+
+  delete(id: number): Observable<any> {
+    return this.http.delete<any>(`${BASE_URL}/users/${id}`);
+  }
 }
