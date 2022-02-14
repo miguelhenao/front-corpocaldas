@@ -24,7 +24,7 @@ export class UsersService {
     return this.http.put<UserPayload>(`${BASE_URL}/users/${user.id}`, user);
   }
 
-  read(id: string): Observable<UserPayload> {
+  read(id: number): Observable<UserPayload> {
     return this.http.get<UserPayload>(`${BASE_URL}/users/${id}`);
   }
 }

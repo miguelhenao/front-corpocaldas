@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Agregar usuario</h2>
+<h2 mat-dialog-title>{{title}}</h2>
 <mat-dialog-content>
   <form [formGroup]="formGroup">
     <mat-form-field appearance="outline">
@@ -35,14 +35,6 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button
-    mat-button
-    color="accent"
-    mat-dialog-close
-  >CANCELAR</button>
-  <button
-    mat-raised-button
-    color="accent"
-    (click)="save()"
-  >CREAR</button>
+  <button mat-button color="accent" mat-dialog-close>CANCELAR</button>
+  <button mat-raised-button color="accent" [disabled]="isSaving$ | async" (click)="save()">GUARDAR</button>
 </mat-dialog-actions>

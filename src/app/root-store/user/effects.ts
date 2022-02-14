@@ -2,9 +2,11 @@
 /* eslint-disable rxjs/no-implicit-any-catch */
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Update } from '@ngrx/entity';
 import { of } from 'rxjs';
-import { catchError, exhaustMap, map, tap } from 'rxjs/operators';
+import { catchError, exhaustMap, map, mapTo, tap } from 'rxjs/operators';
 
+import { UserPayload } from '../../helpers/classes/user';
 import { UsersService } from '../../services/users.service';
 import * as actions from './actions';
 
@@ -49,10 +51,36 @@ export class UsersEffects {
   update$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(actions.UpdateRequested),
-      exhaustMap(action =>
-        this.usersService.update(action.user).pipe(
-          map(user => actions.UpdateSuccess({ user, message: this.updateMessage })),
+      exhaustMap(action => {
+        return this.usersService.update(action.user).pipe(
+          map(user => {
+            const update: Update<UserPayload> = {
+              id: user.id,
+              changes: user
+            };
+            return actions.UpdateSuccess({
+              update,
+              message: this.updateMessage
+            });
+          }),
           catchError(error => of(actions.UpdateFail(error)))
+        );
+      })
+    );
+  });
+
+  delete$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(actions.DeleteRequested),
+      exhaustMap(action =>
+        this.usersService.delete(action.id).pipe(
+          mapTo(
+            actions.DeleteSuccess({
+              id: action.id,
+              message: 'DELETE'
+            })
+          ),
+          catchError(error => of(actions.DeleteFail({ error })))
         )
       )
     );
