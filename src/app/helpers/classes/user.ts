@@ -1,4 +1,4 @@
-export type UserPayload = {
+export interface UserPayload {
   id: number;
   email: string;
   enabled: boolean;
@@ -7,4 +7,4 @@ export type UserPayload = {
   password: string;
   role: string;
   username: string;
-};
+}
