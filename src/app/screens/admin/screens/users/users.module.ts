@@ -13,6 +13,7 @@ import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
 import { UserUpsertComponent } from './components/user-upsert/user-upsert.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ConfirmDialogModule } from '../../../../components/confirm-dialog/confirm-dialog.module';
 
 @NgModule({
   declarations: [UsersComponent, UserUpsertComponent, UserListComponent],
@@ -27,7 +28,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
     MatTableModule,
     MatTooltipModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ConfirmDialogModule
   ]
 })
 export class UsersModule {}

@@ -7,6 +7,10 @@ import { UserPayload } from '../../../../../../helpers/classes/user';
 import { UpsertType } from '../../../../../../helpers/enums/upsert-type';
 import * as actions from '../../../../../../root-store/user/actions';
 import { UserUpsertComponent, UserUpsertModalData } from '../user-upsert/user-upsert.component';
+import {
+  ConfirmDialogComponent,
+  ConfirmModalData
+} from '../../../../../../components/confirm-dialog/confirm-dialog.component';
 
 export interface PeriodicElement {
   name: string;
@@ -26,8 +30,15 @@ export class UserListComponent {
 
   constructor(private dialog: MatDialog, private store: Store) {}
 
-  delete(user: UserPayload): void {
-    this.store.dispatch(actions.DeleteRequested({ id: user.id }));
+  openDeleteModal(user: UserPayload): void {
+    const config: MatDialogConfig<ConfirmModalData> = {
+      data: {
+        message: `¿Desea eliminar al usuario ${user.name} ${user.lastname}?`,
+        actionRequest: actions.DeleteRequested({ id: user.id })
+      }
+    };
+
+    this.dialog.open(ConfirmDialogComponent, config);
   }
 
   openUpdateModal(user: UserPayload): void {
