@@ -1,0 +1,34 @@
+@import 'src/styles/utilities/colors';
+
+.workspaces-content {
+  width: 100%;
+}
+
+.workspaces-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.workspaces-list {
+  padding: 10px;
+}
+
+.title {
+  border-radius: 15px;
+  font-size: 28px;
+  padding: 10px;
+  position: relative;
+  width: 500px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $corpocaldas-green-brand;
+  }
+}
